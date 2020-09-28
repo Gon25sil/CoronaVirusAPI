@@ -1,0 +1,16 @@
+﻿<Application x:Class="CoronaVirus.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:CoronaVirus.ViewModels"
+             xmlns:views="clr-namespace:CoronaVirus.Views"
+             xmlns:local="clr-namespace:CoronaVirus"
+             Startup="OnStartup">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:CoronaCountryInformationViewModel}">
+            <views:CoronaCountryInformation/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:CoronaCountriesViewModel}">
+            <views:CoronaCountriesChartView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
